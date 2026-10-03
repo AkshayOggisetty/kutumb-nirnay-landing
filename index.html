@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kutumb Nirnay — career decisions, made at home</title>
+<meta name="description" content="Career counselling that speaks to the parent, not only the student. Local wages, local seats, local proof — so a family argument becomes a shared decision.">
+<meta property="og:title" content="Kutumb Nirnay">
+<meta property="og:description" content="Career counselling that speaks to the parent, not only the student.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 5 L27 13 V27 H5 V13 Z' fill='none' stroke='%23c2701c' stroke-width='2.4'/></svg>">
+<style>
+:root{
+  --display:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+  --ui:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Inter,Roboto,Arial,sans-serif;
+  --mono:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
+  --indic:'Noto Sans Devanagari','Nirmala UI',sans-serif;
+  --paper:#f7f4ee; --paper-2:#fffdf8; --sunk:#efeae1;
+  --rule:#ded6c8; --rule-soft:#e8e2d6;
+  --ink:#23201c; --ink-2:#4a443c; --ink-3:#7a7064; --ink-4:#a79c8c;
+  --saffron:#c2701c; --indigo:#3f62c4; --teal:#2b6b60;
+  --gut:clamp(20px,5vw,48px); --maxw:1120px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:.002em}
+h1{font-size:clamp(36px,6.2vw,68px);line-height:1.04}
+h2{font-size:clamp(26px,3.6vw,40px);line-height:1.14}
+h3{font-size:19px;line-height:1.3}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.eyebrow{font-size:10.5px;font-weight:650;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-4)}
+.script{font-family:var(--indic)}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.9);
+  backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;
+  transition:border-color .3s var(--ease)}
+nav.stuck{border-color:var(--rule)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:14px var(--gut);
+  display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{color:var(--saffron)}
+.logo b{font-family:var(--display);font-size:18px;font-weight:600}
+.logo em{display:block;font-size:10.5px;color:var(--ink-3);font-style:normal;margin-top:-2px}
+.nav-links{margin-left:auto;display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ui);font-size:14.5px;
+  font-weight:560;padding:11px 22px;border-radius:999px;border:1px solid var(--ink);
+  background:var(--ink);color:var(--paper-2);text-decoration:none;cursor:pointer;
+  transition:transform .25s var(--ease),opacity .25s}
+.btn:hover{transform:translateY(-1px);opacity:.9}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--sunk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+
+/* ---------- hero ---------- */
+header{padding:clamp(60px,10vw,120px) 0 clamp(50px,7vw,86px)}
+.h-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:center}
+@media(max-width:900px){.h-grid{grid-template-columns:1fr}}
+h1 .em{color:var(--saffron)}
+.sub{font-family:var(--display);font-size:clamp(18px,2.2vw,22px);line-height:1.5;
+  color:var(--ink-2);max-width:46ch;margin:22px 0 32px;
+  border-left:3px solid var(--saffron);padding-left:20px}
+.h-cta{display:flex;gap:12px;flex-wrap:wrap}
+.h-note{margin-top:26px;font-size:13px;color:var(--ink-3)}
+
+/* the hero figure: two panels of one decision */
+.split{background:var(--paper-2);border:1px solid var(--rule);border-radius:18px;
+  overflow:hidden;box-shadow:0 20px 50px -28px rgba(35,32,28,.3)}
+.split-row{display:grid;grid-template-columns:1fr 1fr}
+.sp{padding:20px}
+.sp:first-child{border-right:1px solid var(--rule-soft);background:#fdf6ec}
+.sp:last-child{background:#f2f4fa}
+.sp .tag{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.sp:first-child .tag{color:var(--saffron)}
+.sp:last-child .tag{color:var(--indigo)}
+.sp h4{font-family:var(--display);font-size:15px;margin:9px 0 12px;font-weight:600}
+.sp ul{margin:0;padding:0;list-style:none;font-size:12.5px;color:var(--ink-2)}
+.sp li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;
+  border-bottom:1px dotted var(--rule-soft)}
+.sp li b{font-family:var(--mono);color:var(--ink);white-space:nowrap}
+.split-foot{padding:14px 20px;border-top:1px solid var(--rule-soft);
+  font-size:12.5px;color:var(--ink-3);display:flex;justify-content:space-between;
+  align-items:center;gap:12px}
+.split-foot b{color:var(--ink);font-family:var(--mono)}
+
+/* ---------- stat strip ---------- */
+.strip{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  background:var(--paper-2)}
+.strip-in{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:28px;padding:36px var(--gut);max-width:var(--maxw);margin:0 auto}
+.stat b{display:block;font-family:var(--mono);font-size:30px;color:var(--saffron);
+  letter-spacing:-.03em;line-height:1}
+.stat span{display:block;margin-top:8px;font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.stat cite{display:block;margin-top:5px;font-size:11px;color:var(--ink-4);font-style:normal}
+
+/* ---------- sections ---------- */
+section{padding:clamp(60px,8vw,104px) 0}
+.sec-head{max-width:60ch;margin-bottom:44px}
+.sec-head h2{margin-bottom:16px}
+.sec-head p{font-size:17px;color:var(--ink-2)}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.col{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:26px}
+.col .n{font-family:var(--mono);font-size:12px;color:var(--ink-4);letter-spacing:.06em}
+.col h3{margin:14px 0 10px}
+.col p{font-size:14px;color:var(--ink-2);margin:0}
+.col.lit{background:#fffaf2;border-color:#e6cfaa}
+
+/* steps */
+.steps{display:grid;gap:2px;background:var(--rule-soft);border:1px solid var(--rule);
+  border-radius:14px;overflow:hidden}
+.step{background:var(--paper-2);padding:26px 28px;display:grid;
+  grid-template-columns:52px 1fr;gap:22px;align-items:start;
+  transition:background .25s var(--ease)}
+.step:hover{background:#fffaf2}
+.step .sn{font-family:var(--mono);font-size:13px;color:var(--saffron);font-weight:600;
+  padding-top:3px}
+.step h3{margin-bottom:6px}
+.step p{font-size:14px;color:var(--ink-2);margin:0;max-width:72ch}
+@media(max-width:620px){.step{grid-template-columns:1fr;gap:8px}}
+
+/* contrast band */
+.band{background:var(--ink);color:#efe9dd}
+.band .eyebrow{color:#9b9183}
+.band h2{color:#fdfaf4}
+.band p{color:#cfc7ba}
+.vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;
+  margin-top:44px}
+@media(max-width:800px){.vs-grid{grid-template-columns:1fr;gap:18px}}
+.vs-card{border:1px solid #3c3730;border-radius:14px;padding:26px;background:#2a2621}
+.vs-card.good{border-color:var(--saffron);background:#2e2619}
+.vs-card h3{color:#fdfaf4;margin-bottom:12px}
+.vs-card ul{margin:0;padding-left:18px;font-size:14px;color:#cfc7ba}
+.vs-card li{margin:7px 0}
+.vs-mid{font-family:var(--display);font-size:15px;color:#8b8277;text-align:center}
+
+/* map teaser */
+.teaser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);align-items:center}
+@media(max-width:860px){.teaser{grid-template-columns:1fr}}
+.plate-mini{background:var(--paper-2);border:1px solid var(--rule);border-radius:50%;
+  aspect-ratio:1;display:grid;place-items:center;position:relative;max-width:420px;
+  margin:0 auto;width:100%}
+.plate-mini svg{width:100%;height:100%}
+
+/* closing */
+.close{text-align:center;padding:clamp(70px,9vw,120px) 0}
+.close h2{max-width:20ch;margin:0 auto 20px}
+.close p{max-width:52ch;margin:0 auto 32px;font-size:17px;color:var(--ink-2)}
+
+footer{border-top:1px solid var(--rule);background:var(--sunk);padding:44px 0 56px}
+.f-in{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
+@media(max-width:760px){.f-in{grid-template-columns:1fr;gap:26px}}
+footer p{font-size:13.5px;color:var(--ink-3);max-width:46ch}
+.f-col{display:flex;flex-direction:column;gap:8px}
+.f-col a{font-size:13.5px;color:var(--ink-2);text-decoration:none}
+.f-col a:hover{text-decoration:underline}
+.f-base{margin-top:36px;padding-top:22px;border-top:1px solid var(--rule);
+  font-size:12px;color:var(--ink-4);display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top">
+      <svg width="27" height="27" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7">
+        <path d="M16 4 L28 13 V28 H4 V13 Z" stroke-linejoin="round"/>
+        <circle cx="12" cy="20" r="2.6" stroke-width="1.5"/>
+        <circle cx="20" cy="20" r="2.6" stroke-width="1.5"/>
+        <path d="M14.6 20 h2.8" stroke-width="1.5"/>
+      </svg>
+      <span><b>Kutumb Nirnay</b><em class="script">कुटुंब निर्णय</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#problem">The problem</a>
+      <a href="#how">How it works</a>
+      <a href="#different">What's different</a>
+      <a class="btn" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the prototype</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<header>
+  <div class="wrap h-grid">
+    <div>
+      <span class="eyebrow">Career guidance for vocational education</span>
+      <h1>The decision is made at&nbsp;home. So that is where the counselling <span class="em">belongs</span>.</h1>
+      <p class="sub">Kutumb Nirnay counsels the whole family — not just the student —
+        turning a career argument into a shared, evidence-backed decision.</p>
+      <div class="h-cta">
+        <a class="btn" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the prototype →</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <p class="h-note">Works in the browser. Nothing is collected, nothing is sent anywhere.</p>
+    </div>
+
+    <div class="split rv">
+      <div class="split-row">
+        <div class="sp">
+          <span class="tag">Student sees</span>
+          <h4>ITI — Electrician</h4>
+          <ul>
+            <li><span>Training</span><b>24 months</b></li>
+            <li><span>Level</span><b>NSQF 4</b></li>
+            <li><span>Can work alone</span><b>Yes</b></li>
+            <li><span>Leads to</span><b>B.E. lateral</b></li>
+          </ul>
+        </div>
+        <div class="sp">
+          <span class="tag">Parent sees</span>
+          <h4>What it means at home</h4>
+          <ul>
+            <li><span>Earning begins</span><b>month 25</b></li>
+            <li><span>Starting wage</span><b>₹13–16k</b></li>
+            <li><span>Placement</span><b>65%</b></li>
+            <li><span>Break-even</span><b>2y 1m</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="split-foot">
+        <span>Same decision. Two questions. Both answered.</span>
+        <b>one screen</b>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="strip-in">
+    <div class="stat rv"><b class="num">1 : 3,000</b>
+      <span>counsellor-to-student ratio in India</span>
+      <cite>the recommended ratio is 1:250</cite></div>
+    <div class="stat rv"><b class="num">10.4%</b>
+      <span>of students have access to professional career counselling</span>
+      <cite>UN study, 21,239 students across 7 states</cite></div>
+    <div class="stat rv"><b class="num">41%</b>
+      <span>of short-term skill trainees reach placement</span>
+      <cite>CAG performance audit, 2025</cite></div>
+    <div class="stat rv"><b class="num">85%</b>
+      <span>of students already ask a general AI chatbot for career advice</span>
+      <cite>with no local wage or seat data behind it</cite></div>
+  </div>
+</div>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">The problem</span>
+      <h2>Vocational education does not fail for lack of information.</h2>
+      <p>It fails because the parent holds the veto and has never been given
+      anything to change their mind with. Every tool on the market talks to the
+      student. Nobody is in the room with the person actually deciding.</p>
+    </div>
+    <div class="cols">
+      <div class="col rv"><span class="n">01</span>
+        <h3>The parent decides</h3>
+        <p>Students default to the course their parents name. Those parents are
+        working from a labour market they last saw thirty years ago.</p></div>
+      <div class="col rv"><span class="n">02</span>
+        <h3>Status, not evidence</h3>
+        <p>A trade is read as a last resort and a degree as a safe bet — a ranking
+        no one has ever tested against placement rates or wages.</p></div>
+      <div class="col rv"><span class="n">03</span>
+        <h3>Nobody to ask</h3>
+        <p>One counsellor per three thousand students. For most families the
+        conversation simply never happens.</p></div>
+      <div class="col rv lit"><span class="n">04</span>
+        <h3>And it decays</h3>
+        <p>Even good guidance fades. Aspiration effects measured in trials are
+        largely gone within a fortnight — so one session was never going to work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">How it works</span>
+      <h2>Six steps, and the household is in all of them</h2>
+      <p>Not an aptitude test that produces a PDF. A conversation that ends in a
+      plan both sides have signed.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><span class="sn">01</span><div>
+        <h3>Start with the household, not the student</h3>
+        <p>District, income, the student's stage — and the objection actually being
+        raised at home. Every recommendation is conditioned on what the family can
+        afford to wait for.</p></div></div>
+      <div class="step"><span class="sn">02</span><div>
+        <h3>Show one decision in two views</h3>
+        <p>The student sees what the work is and where it leads. The parent sees
+        when the money starts, what it costs, and how often it ends in a job.</p></div></div>
+      <div class="step"><span class="sn">03</span><div>
+        <h3>Model the household's own cash flow</h3>
+        <p>Fees out, stipend and wages in, discounted by real placement rates.
+        A family is making a financial decision under uncertainty — so show it that way.</p></div></div>
+      <div class="step"><span class="sn">04</span><div>
+        <h3>Map what is actually reachable</h3>
+        <p>Direction, road distance, travel mode, journey time and monthly fare to
+        every ITI, polytechnic, skill hub and college in range. A path is only real
+        if the child can get there every morning.</p></div></div>
+      <div class="step"><span class="sn">05</span><div>
+        <h3>Answer the objection, not the question</h3>
+        <p>“It is a dead end.” “What will people say?” Each one answered with
+        evidence and with the neighbours who already took that route.</p></div></div>
+      <div class="step"><span class="sn">06</span><div>
+        <h3>End with something on paper</h3>
+        <p>A decision record with concerns named, numbers attached, and a review
+        date — because the conversation has to continue after the room empties.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="different">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What's different</span>
+      <h2>The recommender already exists. The conversation does not.</h2>
+      <p>National skilling platforms already carry thousands of courses with
+      AI-matched recommendations for students. That problem is solved. This is the
+      other half.</p>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-card rv">
+        <h3>Every career tool today</h3>
+        <ul>
+          <li>Speaks to the student</li>
+          <li>Starts from a psychometric test</li>
+          <li>Produces a report, once</li>
+          <li>Quotes a salary with no date attached</li>
+          <li>Built for a city, in English</li>
+        </ul>
+      </div>
+      <div class="vs-mid rv">against</div>
+      <div class="vs-card good rv">
+        <h3>Kutumb Nirnay</h3>
+        <ul>
+          <li>Speaks to the parent holding the veto</li>
+          <li>Starts from the household's economics</li>
+          <li>Stays through the decision window</li>
+          <li>Shows month-by-month household position</li>
+          <li>Voice-first, in the language spoken at home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap teaser">
+    <div class="rv">
+      <span class="eyebrow">Reachability</span>
+      <h2>Is it close enough to go every morning?</h2>
+      <p style="font-size:17px;color:var(--ink-2);margin-top:16px">
+        Bearing gives direction, radius gives distance. Every institute in range,
+        with the travel mode, the journey time and what the commute costs a month —
+        computed, not guessed. Because the best course in the state is worth nothing
+        if the bus does not go there.</p>
+      <p style="font-size:14px;color:var(--ink-3)">
+        Drawn rather than tiled, so it works on a weak connection and a cheap phone.</p>
+    </div>
+    <div class="plate-mini rv">
+      <svg viewBox="0 0 300 300" aria-label="Radial plan of nearby institutes">
+        <circle cx="150" cy="150" r="128" fill="none" stroke="#ded6c8"/>
+        <circle cx="150" cy="150" r="46" fill="none" stroke="#e8e2d6" stroke-dasharray="3 4"/>
+        <circle cx="150" cy="150" r="80" fill="none" stroke="#e8e2d6" stroke-dasharray="3 4"/>
+        <circle cx="150" cy="150" r="112" fill="none" stroke="#e8e2d6" stroke-dasharray="3 4"/>
+        <line x1="150" y1="22" x2="150" y2="278" stroke="#efeae1"/>
+        <line x1="22" y1="150" x2="278" y2="150" stroke="#efeae1"/>
+        <g font-family="ui-monospace,Menlo,monospace" font-size="8" fill="#a79c8c">
+          <text x="154" y="100">5 km</text><text x="154" y="66">15 km</text><text x="154" y="34">40 km</text>
+        </g>
+        <g stroke="#c2701c" stroke-width="1" opacity=".5">
+          <line x1="150" y1="150" x2="186" y2="122"/>
+          <line x1="150" y1="150" x2="112" y2="168"/>
+          <line x1="150" y1="150" x2="168" y2="206"/>
+          <line x1="150" y1="150" x2="94" y2="104"/>
+        </g>
+        <g fill="#fffdf8" stroke="#a79c8c" stroke-width="1.2">
+          <circle cx="186" cy="122" r="11"/><circle cx="112" cy="168" r="11"/>
+          <circle cx="168" cy="206" r="11"/><circle cx="94" cy="104" r="11"/>
+        </g>
+        <circle cx="186" cy="122" r="11" fill="#c2701c" stroke="#fffdf8" stroke-width="2"/>
+        <circle cx="150" cy="150" r="6.5" fill="#23201c"/>
+        <circle cx="150" cy="150" r="12" fill="none" stroke="#23201c" opacity=".25"/>
+        <text x="150" y="176" text-anchor="middle" font-family="-apple-system,Segoe UI,sans-serif"
+              font-size="10" font-weight="600" fill="#4a443c">Home</text>
+        <text x="202" y="118" font-family="-apple-system,Segoe UI,sans-serif" font-size="9.5"
+              fill="#23201c" font-weight="600">ITI · 8.7 km</text>
+        <text x="202" y="130" font-family="-apple-system,Segoe UI,sans-serif" font-size="9"
+              fill="#7a7064">auto · 26 min</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="close" style="background:var(--paper-2);border-top:1px solid var(--rule)">
+  <div class="wrap">
+    <h2 class="rv">A good decision is one the whole family can defend.</h2>
+    <p class="rv">Open the prototype and walk a household through it —
+      from the argument at home to the plan on paper.</p>
+    <a class="btn rv" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the prototype →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-in">
+      <div>
+        <a class="logo" href="#top" style="margin-bottom:12px">
+          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M16 4 L28 13 V28 H4 V13 Z" stroke-linejoin="round"/>
+            <circle cx="12" cy="20" r="2.6" stroke-width="1.5"/><circle cx="20" cy="20" r="2.6" stroke-width="1.5"/>
+            <path d="M14.6 20 h2.8" stroke-width="1.5"/>
+          </svg>
+          <span><b>Kutumb Nirnay</b></span>
+        </a>
+        <p>Career counselling and decision support for the household. Built on the
+        NSQF, PMKVY and NAPS rails — designed to sit in front of national skilling
+        infrastructure, not to replace it.</p>
+      </div>
+      <div class="f-col">
+        <span class="eyebrow">Where a recommendation ends</span>
+        <a href="https://www.skillindiadigital.gov.in" target="_blank" rel="noopener">Skill India Digital Hub</a>
+        <a href="https://www.apprenticeshipindia.gov.in" target="_blank" rel="noopener">Apprenticeship India</a>
+        <a href="https://www.ncs.gov.in" target="_blank" rel="noopener">National Career Service</a>
+        <a href="https://www.nqr.gov.in" target="_blank" rel="noopener">Qualifications Register</a>
+      </div>
+      <div class="f-col">
+        <span class="eyebrow">Project</span>
+        <a href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Prototype</a>
+        <a href="https://github.com/AkshayOggisetty/kutumb-nirnay" target="_blank" rel="noopener">Source</a>
+      </div>
+    </div>
+    <div class="f-base">
+      <span>All figures shown in the prototype are seeded demonstration data.</span>
+      <span class="script">कुटुंब निर्णय</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 8), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach((el,i) => {
+  el.style.transitionDelay = (i % 4) * 70 + 'ms';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
