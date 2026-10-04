@@ -4,7 +4,7 @@ Marketing site for **Kutumb Nirnay**, career guidance built for the whole family
 than the student alone.
 
 **Live:** https://akshayoggisetty.github.io/kutumb-nirnay-landing/
-**App:** https://akshayoggisetty.github.io/kutumb-nirnay/
+**App:** https://kutumb-nirnay.vercel.app
 **App source:** https://github.com/AkshayOggisetty/kutumb-nirnay
 
 A single self contained `index.html`. No build step, no dependencies, no trackers. Type and
