@@ -3,19 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kutumb Nirnay — career decisions, made at home</title>
-<meta name="description" content="Career counselling that speaks to the parent, not only the student. Local wages, local seats, local proof — so a family argument becomes a shared decision.">
+<title>Kutumb Nirnay</title>
+<meta name="description" content="Career guidance for the whole family. See what a course costs, when the earning starts, how often it leads to a job, and which centres you can actually reach.">
 <meta property="og:title" content="Kutumb Nirnay">
-<meta property="og:description" content="Career counselling that speaks to the parent, not only the student.">
+<meta property="og:description" content="Career guidance for the whole family, not just the student.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 5 L27 13 V27 H5 V13 Z' fill='none' stroke='%23c2701c' stroke-width='2.4'/></svg>">
-<script>document.documentElement.className+=" js";</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 5 L27 13 V27 H5 V13 Z' fill='none' stroke='%23c2701c' stroke-width='2.6'/></svg>">
+<script>document.documentElement.className += ' js';</script>
 <style>
 :root{
   --display:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
   --ui:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Inter,Roboto,Arial,sans-serif;
   --mono:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;
-  --indic:'Noto Sans Devanagari','Nirmala UI',sans-serif;
   --paper:#f7f4ee; --paper-2:#fffdf8; --sunk:#efeae1;
   --rule:#ded6c8; --rule-soft:#e8e2d6;
   --ink:#23201c; --ink-2:#4a443c; --ink-3:#7a7064; --ink-4:#a79c8c;
@@ -26,29 +25,28 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);
-  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:.002em}
-h1{font-size:clamp(36px,6.2vw,68px);line-height:1.04}
-h2{font-size:clamp(26px,3.6vw,40px);line-height:1.14}
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;margin:0;letter-spacing:.002em}
+h1{font-size:clamp(34px,5.8vw,64px);line-height:1.06}
+h2{font-size:clamp(25px,3.4vw,38px);line-height:1.15}
 h3{font-size:19px;line-height:1.3}
 p{margin:0 0 1em}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.eyebrow{font-size:10.5px;font-weight:650;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-4)}
-.script{font-family:var(--indic)}
+.kicker{font-size:11px;font-weight:650;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-4);margin:0 0 14px}
 
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.9);
+/* ---------------- nav ---------------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.92);
   backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;
   transition:border-color .3s var(--ease)}
 nav.stuck{border-color:var(--rule)}
-.nav-in{max-width:var(--maxw);margin:0 auto;padding:14px var(--gut);
-  display:flex;align-items:center;gap:24px}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:14px var(--gut);display:flex;
+  align-items:center;gap:24px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .logo svg{color:var(--saffron)}
 .logo b{font-family:var(--display);font-size:18px;font-weight:600}
-.logo em{display:block;font-size:10.5px;color:var(--ink-3);font-style:normal;margin-top:-2px}
 .nav-links{margin-left:auto;display:flex;gap:26px;align-items:center}
 .nav-links a{font-size:14px;color:var(--ink-2);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
@@ -56,25 +54,28 @@ nav.stuck{border-color:var(--rule)}
   font-weight:560;padding:11px 22px;border-radius:999px;border:1px solid var(--ink);
   background:var(--ink);color:var(--paper-2);text-decoration:none;cursor:pointer;
   transition:transform .25s var(--ease),opacity .25s}
-.btn:hover{transform:translateY(-1px);opacity:.9}
+.btn:hover{transform:translateY(-1px);opacity:.92}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.ghost:hover{background:var(--sunk)}
-@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.btn.lg{font-size:16px;padding:14px 28px}
+@media(max-width:760px){.nav-links a:not(.btn){display:none}}
 
-/* ---------- hero ---------- */
-header{padding:clamp(60px,10vw,120px) 0 clamp(50px,7vw,86px)}
-.h-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,64px);align-items:center}
-@media(max-width:900px){.h-grid{grid-template-columns:1fr}}
+/* ---------------- hero ---------------- */
+header{padding:clamp(56px,9vw,110px) 0 clamp(44px,6vw,76px)}
+.h-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,60px);align-items:center}
+@media(max-width:920px){.h-grid{grid-template-columns:1fr}}
 h1 .em{color:var(--saffron)}
-.sub{font-family:var(--display);font-size:clamp(18px,2.2vw,22px);line-height:1.5;
-  color:var(--ink-2);max-width:46ch;margin:22px 0 32px;
-  border-left:3px solid var(--saffron);padding-left:20px}
-.h-cta{display:flex;gap:12px;flex-wrap:wrap}
-.h-note{margin-top:26px;font-size:13px;color:var(--ink-3)}
+.sub{font-family:var(--display);font-size:clamp(18px,2.1vw,22px);line-height:1.52;
+  color:var(--ink-2);max-width:48ch;margin:24px 0 32px}
+.h-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.h-note{margin-top:22px;font-size:13.5px;color:var(--ink-3)}
 
-/* the hero figure: two panels of one decision */
+/* hero figure */
 .split{background:var(--paper-2);border:1px solid var(--rule);border-radius:18px;
-  overflow:hidden;box-shadow:0 20px 50px -28px rgba(35,32,28,.3)}
+  overflow:hidden;box-shadow:0 24px 60px -34px rgba(35,32,28,.42)}
+.split-cap{padding:14px 20px;border-bottom:1px solid var(--rule-soft);font-size:12px;
+  color:var(--ink-3);display:flex;justify-content:space-between;gap:10px;align-items:center}
+.split-cap b{color:var(--ink)}
 .split-row{display:grid;grid-template-columns:1fr 1fr}
 .sp{padding:20px}
 .sp:first-child{border-right:1px solid var(--rule-soft);background:#fdf6ec}
@@ -86,92 +87,96 @@ h1 .em{color:var(--saffron)}
 .sp ul{margin:0;padding:0;list-style:none;font-size:12.5px;color:var(--ink-2)}
 .sp li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;
   border-bottom:1px dotted var(--rule-soft)}
+.sp li:last-child{border:0}
 .sp li b{font-family:var(--mono);color:var(--ink);white-space:nowrap}
-.split-foot{padding:14px 20px;border-top:1px solid var(--rule-soft);
-  font-size:12.5px;color:var(--ink-3);display:flex;justify-content:space-between;
-  align-items:center;gap:12px}
-.split-foot b{color:var(--ink);font-family:var(--mono)}
 
-/* ---------- stat strip ---------- */
-.strip{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
-  background:var(--paper-2)}
-.strip-in{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:28px;padding:36px var(--gut);max-width:var(--maxw);margin:0 auto}
+/* ---------------- stats ---------------- */
+.strip{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--paper-2)}
+.strip-in{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:30px;
+  padding:38px var(--gut);max-width:var(--maxw);margin:0 auto}
 .stat b{display:block;font-family:var(--mono);font-size:30px;color:var(--saffron);
   letter-spacing:-.03em;line-height:1}
-.stat span{display:block;margin-top:8px;font-size:12.5px;color:var(--ink-3);line-height:1.45}
-.stat cite{display:block;margin-top:5px;font-size:11px;color:var(--ink-4);font-style:normal}
+.stat span{display:block;margin-top:9px;font-size:13px;color:var(--ink-2);line-height:1.5}
+.stat cite{display:block;margin-top:6px;font-size:11.5px;color:var(--ink-4);font-style:normal}
 
-/* ---------- sections ---------- */
-section{padding:clamp(60px,8vw,104px) 0}
-.sec-head{max-width:60ch;margin-bottom:44px}
-.sec-head h2{margin-bottom:16px}
-.sec-head p{font-size:17px;color:var(--ink-2)}
+/* ---------------- sections ---------------- */
+section{padding:clamp(56px,7.5vw,100px) 0}
+.sec-head{max-width:62ch;margin-bottom:46px}
+.sec-head h2{margin-bottom:18px}
+.sec-head p{font-size:17.5px;color:var(--ink-2)}
 
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.col{background:var(--paper-2);border:1px solid var(--rule);border-radius:14px;padding:26px}
-.col .n{font-family:var(--mono);font-size:12px;color:var(--ink-4);letter-spacing:.06em}
-.col h3{margin:14px 0 10px}
-.col p{font-size:14px;color:var(--ink-2);margin:0}
-.col.lit{background:#fffaf2;border-color:#e6cfaa}
+/* story: the four frictions */
+.story{display:grid;gap:18px}
+.beat{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;
+  padding:26px 0;border-top:1px solid var(--rule-soft)}
+.beat:first-child{border-top:0;padding-top:0}
+.beat-n{font-family:var(--mono);font-size:13px;color:var(--saffron);font-weight:700;
+  padding-top:5px;min-width:28px}
+.beat h3{margin-bottom:8px}
+.beat p{font-size:15px;color:var(--ink-2);margin:0;max-width:68ch}
+@media(max-width:620px){.beat{grid-template-columns:1fr;gap:8px}}
 
 /* steps */
 .steps{display:grid;gap:2px;background:var(--rule-soft);border:1px solid var(--rule);
-  border-radius:14px;overflow:hidden}
-.step{background:var(--paper-2);padding:26px 28px;display:grid;
-  grid-template-columns:52px 1fr;gap:22px;align-items:start;
-  transition:background .25s var(--ease)}
+  border-radius:16px;overflow:hidden}
+.step{background:var(--paper-2);padding:28px 30px;display:grid;grid-template-columns:54px 1fr;
+  gap:22px;align-items:start;transition:background .25s var(--ease)}
 .step:hover{background:#fffaf2}
-.step .sn{font-family:var(--mono);font-size:13px;color:var(--saffron);font-weight:600;
-  padding-top:3px}
-.step h3{margin-bottom:6px}
-.step p{font-size:14px;color:var(--ink-2);margin:0;max-width:72ch}
-@media(max-width:620px){.step{grid-template-columns:1fr;gap:8px}}
+.step .sn{font-family:var(--mono);font-size:13px;color:var(--saffron);font-weight:700;padding-top:3px}
+.step h3{margin-bottom:7px}
+.step p{font-size:14.5px;color:var(--ink-2);margin:0;max-width:74ch}
+@media(max-width:620px){.step{grid-template-columns:1fr;gap:8px;padding:22px}}
 
-/* contrast band */
+/* dark band */
 .band{background:var(--ink);color:#efe9dd}
-.band .eyebrow{color:#9b9183}
+.band .kicker{color:#9b9183}
 .band h2{color:#fdfaf4}
-.band p{color:#cfc7ba}
-.vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;
-  margin-top:44px}
-@media(max-width:800px){.vs-grid{grid-template-columns:1fr;gap:18px}}
-.vs-card{border:1px solid #3c3730;border-radius:14px;padding:26px;background:#2a2621}
+.band .sec-head p{color:#cfc7ba}
+.vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center}
+@media(max-width:820px){.vs-grid{grid-template-columns:1fr;gap:16px}}
+.vs-card{border:1px solid #3c3730;border-radius:16px;padding:28px;background:#2a2621}
 .vs-card.good{border-color:var(--saffron);background:#2e2619}
-.vs-card h3{color:#fdfaf4;margin-bottom:12px}
-.vs-card ul{margin:0;padding-left:18px;font-size:14px;color:#cfc7ba}
-.vs-card li{margin:7px 0}
+.vs-card h3{color:#fdfaf4;margin-bottom:14px}
+.vs-card ul{margin:0;padding-left:18px;font-size:14.5px;color:#cfc7ba}
+.vs-card li{margin:9px 0}
 .vs-mid{font-family:var(--display);font-size:15px;color:#8b8277;text-align:center}
 
 /* map teaser */
 .teaser{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);align-items:center}
-@media(max-width:860px){.teaser{grid-template-columns:1fr}}
+@media(max-width:880px){.teaser{grid-template-columns:1fr}}
 .plate-mini{background:var(--paper-2);border:1px solid var(--rule);border-radius:50%;
-  aspect-ratio:1;display:grid;place-items:center;position:relative;max-width:420px;
-  margin:0 auto;width:100%}
-.plate-mini svg{width:100%;height:100%}
+  aspect-ratio:1;max-width:400px;margin:0 auto;width:100%}
+.plate-mini svg{width:100%;height:100%;display:block}
+
+/* privacy note */
+.note{background:var(--paper-2);border:1px solid var(--rule);border-radius:16px;
+  padding:30px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+.note svg{color:var(--teal);flex:none}
+.note h3{margin-bottom:8px}
+.note p{font-size:14.5px;color:var(--ink-2);margin:0;max-width:72ch}
+@media(max-width:620px){.note{grid-template-columns:1fr}}
 
 /* closing */
-.close{text-align:center;padding:clamp(70px,9vw,120px) 0}
-.close h2{max-width:20ch;margin:0 auto 20px}
-.close p{max-width:52ch;margin:0 auto 32px;font-size:17px;color:var(--ink-2)}
+.close{text-align:center;padding:clamp(66px,8vw,112px) 0}
+.close h2{max-width:22ch;margin:0 auto 20px}
+.close p{max-width:54ch;margin:0 auto 34px;font-size:17.5px;color:var(--ink-2)}
 
-footer{border-top:1px solid var(--rule);background:var(--sunk);padding:44px 0 56px}
-.f-in{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
-@media(max-width:760px){.f-in{grid-template-columns:1fr;gap:26px}}
+footer{border-top:1px solid var(--rule);background:var(--sunk);padding:46px 0 56px}
+.f-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+@media(max-width:780px){.f-in{grid-template-columns:1fr;gap:28px}}
 footer p{font-size:13.5px;color:var(--ink-3);max-width:46ch}
-.f-col{display:flex;flex-direction:column;gap:8px}
+.f-col{display:flex;flex-direction:column;gap:9px}
+.f-col .kicker{margin-bottom:2px}
 .f-col a{font-size:13.5px;color:var(--ink-2);text-decoration:none}
 .f-col a:hover{text-decoration:underline}
-.f-base{margin-top:36px;padding-top:22px;border-top:1px solid var(--rule);
-  font-size:12px;color:var(--ink-4);display:flex;justify-content:space-between;
-  gap:16px;flex-wrap:wrap}
+.f-base{margin-top:38px;padding-top:22px;border-top:1px solid var(--rule);
+  font-size:12.5px;color:var(--ink-4)}
 
-/* reveal */
-.rv{transition:opacity .7s var(--ease),transform .7s var(--ease)}
-html.js .rv{opacity:0;transform:translateY(14px)}
+/* reveal, only when scripting is on, and never permanently hidden */
+.rv{transition:opacity .75s var(--ease),transform .75s var(--ease)}
+html.js .rv{opacity:0;transform:translateY(16px)}
 html.js .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none}*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -185,13 +190,13 @@ html.js .rv.in{opacity:1;transform:none}
         <circle cx="20" cy="20" r="2.6" stroke-width="1.5"/>
         <path d="M14.6 20 h2.8" stroke-width="1.5"/>
       </svg>
-      <span><b>Kutumb Nirnay</b><em class="script">कुटुंब निर्णय</em></span>
+      <b>Kutumb Nirnay</b>
     </a>
     <div class="nav-links">
-      <a href="#problem">The problem</a>
+      <a href="#why">Why it matters</a>
       <a href="#how">How it works</a>
-      <a href="#different">What's different</a>
-      <a class="btn" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the prototype</a>
+      <a href="#different">What makes it different</a>
+      <a class="btn" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the app</a>
     </div>
   </div>
 </nav>
@@ -201,43 +206,41 @@ html.js .rv.in{opacity:1;transform:none}
 <header>
   <div class="wrap h-grid">
     <div>
-      <span class="eyebrow">Career guidance for vocational education</span>
-      <h1>The decision is made at&nbsp;home. So that is where the counselling <span class="em">belongs</span>.</h1>
-      <p class="sub">Kutumb Nirnay counsels the whole family — not just the student —
-        turning a career argument into a shared, evidence-backed decision.</p>
+      <p class="kicker">Career guidance for families</p>
+      <h1>The decision is made at home, so that is where the guidance <span class="em">belongs</span>.</h1>
+      <p class="sub">Most career advice speaks only to the student. Kutumb Nirnay is built
+        for the whole family, so the person who actually decides can see what a course
+        costs, when the earning starts, and how often it ends in a job.</p>
       <div class="h-cta">
-        <a class="btn" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the prototype →</a>
-        <a class="btn ghost" href="#how">See how it works</a>
+        <a class="btn lg" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the app</a>
+        <a class="btn ghost lg" href="#how">See how it works</a>
       </div>
-      <p class="h-note">Works in the browser. Nothing is collected, nothing is sent anywhere.</p>
+      <p class="h-note">Free to use. Works on any phone. Nothing you enter leaves your device.</p>
     </div>
 
     <div class="split rv">
+      <div class="split-cap"><span>One course, two different questions</span><b>ITI Electrician</b></div>
       <div class="split-row">
         <div class="sp">
-          <span class="tag">Student sees</span>
-          <h4>ITI — Electrician</h4>
+          <span class="tag">What the student asks</span>
+          <h4>What would I actually do?</h4>
           <ul>
             <li><span>Training</span><b>24 months</b></li>
             <li><span>Level</span><b>NSQF 4</b></li>
-            <li><span>Can work alone</span><b>Yes</b></li>
-            <li><span>Leads to</span><b>B.E. lateral</b></li>
+            <li><span>Work for yourself</span><b>Yes</b></li>
+            <li><span>Can lead to</span><b>B.E. entry</b></li>
           </ul>
         </div>
         <div class="sp">
-          <span class="tag">Parent sees</span>
-          <h4>What it means at home</h4>
+          <span class="tag">What the parent asks</span>
+          <h4>What does it mean for us?</h4>
           <ul>
             <li><span>Earning begins</span><b>month 25</b></li>
-            <li><span>Starting wage</span><b>₹13–16k</b></li>
-            <li><span>Placement</span><b>65%</b></li>
-            <li><span>Break-even</span><b>2y 1m</b></li>
+            <li><span>Starting pay</span><b>13 to 16k</b></li>
+            <li><span>Finds work</span><b>65%</b></li>
+            <li><span>We break even</span><b>2y 1m</b></li>
           </ul>
         </div>
-      </div>
-      <div class="split-foot">
-        <span>Same decision. Two questions. Both answered.</span>
-        <b>one screen</b>
       </div>
     </div>
   </div>
@@ -246,46 +249,50 @@ html.js .rv.in{opacity:1;transform:none}
 <div class="strip">
   <div class="strip-in">
     <div class="stat rv"><b class="num">1 : 3,000</b>
-      <span>counsellor-to-student ratio in India</span>
-      <cite>the recommended ratio is 1:250</cite></div>
+      <span>students for every career counsellor in India</span>
+      <cite>the recommended ratio is 1 to 250</cite></div>
     <div class="stat rv"><b class="num">10.4%</b>
-      <span>of students have access to professional career counselling</span>
-      <cite>UN study, 21,239 students across 7 states</cite></div>
+      <span>of students have ever spoken to a professional counsellor</span>
+      <cite>UN study, 21,239 students across seven states</cite></div>
     <div class="stat rv"><b class="num">41%</b>
-      <span>of short-term skill trainees reach placement</span>
+      <span>of short term skill trainees actually reach a placement</span>
       <cite>CAG performance audit, 2025</cite></div>
     <div class="stat rv"><b class="num">85%</b>
-      <span>of students already ask a general AI chatbot for career advice</span>
-      <cite>with no local wage or seat data behind it</cite></div>
+      <span>of students already ask a general AI chatbot about careers</span>
+      <cite>with no local wage or seat information behind it</cite></div>
   </div>
 </div>
 
-<section id="problem">
+<section id="why">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">The problem</span>
-      <h2>Vocational education does not fail for lack of information.</h2>
-      <p>It fails because the parent holds the veto and has never been given
-      anything to change their mind with. Every tool on the market talks to the
-      student. Nobody is in the room with the person actually deciding.</p>
+      <p class="kicker">Why it matters</p>
+      <h2>Vocational education does not fail because families lack information.</h2>
+      <p>It fails because the person holding the decision has never been given anything
+        solid enough to change their mind with. Four things get in the way, and every one
+        of them is fixable.</p>
     </div>
-    <div class="cols">
-      <div class="col rv"><span class="n">01</span>
-        <h3>The parent decides</h3>
-        <p>Students default to the course their parents name. Those parents are
-        working from a labour market they last saw thirty years ago.</p></div>
-      <div class="col rv"><span class="n">02</span>
-        <h3>Status, not evidence</h3>
-        <p>A trade is read as a last resort and a degree as a safe bet — a ranking
-        no one has ever tested against placement rates or wages.</p></div>
-      <div class="col rv"><span class="n">03</span>
-        <h3>Nobody to ask</h3>
-        <p>One counsellor per three thousand students. For most families the
-        conversation simply never happens.</p></div>
-      <div class="col rv lit"><span class="n">04</span>
-        <h3>And it decays</h3>
-        <p>Even good guidance fades. Aspiration effects measured in trials are
-        largely gone within a fortnight — so one session was never going to work.</p></div>
+    <div class="story">
+      <article class="beat rv"><span class="beat-n">01</span><div>
+        <h3>The parent decides, and nobody is talking to them</h3>
+        <p>Students take the course their parents name. Those parents are working from a
+        labour market they last saw decades ago, and no career tool on the market
+        addresses them directly.</p></div></article>
+      <article class="beat rv"><span class="beat-n">02</span><div>
+        <h3>Status stands in for evidence</h3>
+        <p>A trade reads as a last resort and a degree as a safe bet. That ranking has
+        never been tested against what each one pays, or how often either ends in a job.
+        Put the two side by side and the ranking often reverses.</p></div></article>
+      <article class="beat rv"><span class="beat-n">03</span><div>
+        <h3>There is no one to ask</h3>
+        <p>One counsellor serves roughly three thousand students. For most families the
+        conversation simply never happens, so the decision gets made on rumour and on
+        whatever the neighbours did.</p></div></article>
+      <article class="beat rv"><span class="beat-n">04</span><div>
+        <h3>Even good advice fades</h3>
+        <p>Research on aspiration tracks how quickly encouragement wears off, often within
+        a fortnight. A single counselling session was never going to be enough, which is
+        why this is built to stay with a family through the whole admission season.</p></div></article>
     </div>
   </div>
 </section>
@@ -293,38 +300,33 @@ html.js .rv.in{opacity:1;transform:none}
 <section id="how" style="background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">How it works</span>
-      <h2>Six steps, and the household is in all of them</h2>
-      <p>Not an aptitude test that produces a PDF. A conversation that ends in a
-      plan both sides have signed.</p>
+      <p class="kicker">How it works</p>
+      <h2>Four steps, and the household is part of every one</h2>
+      <p>No aptitude quiz that produces a report nobody reads. A guided conversation that
+        ends in a plan the student and the parent have both seen and agreed to.</p>
     </div>
     <div class="steps rv">
       <div class="step"><span class="sn">01</span><div>
-        <h3>Start with the household, not the student</h3>
-        <p>District, income, the student's stage — and the objection actually being
-        raised at home. Every recommendation is conditioned on what the family can
-        afford to wait for.</p></div></div>
+        <h3>Start with the household, not a personality test</h3>
+        <p>Where you live, what the household earns, how soon another earner is needed,
+        and what the student actually enjoys. Options are then ranked for your situation
+        rather than in the abstract, because a three year course means something very
+        different on nineteen thousand a month than on sixty.</p></div></div>
       <div class="step"><span class="sn">02</span><div>
-        <h3>Show one decision in two views</h3>
-        <p>The student sees what the work is and where it leads. The parent sees
-        when the money starts, what it costs, and how often it ends in a job.</p></div></div>
+        <h3>Compare two options the way each person sees them</h3>
+        <p>The student gets the course content, the qualification level and where it can
+        lead. The parent gets the fees, the month earning begins, the starting pay and how
+        often that course actually ends in a job. Same screen, both answers.</p></div></div>
       <div class="step"><span class="sn">03</span><div>
-        <h3>Model the household's own cash flow</h3>
-        <p>Fees out, stipend and wages in, discounted by real placement rates.
-        A family is making a financial decision under uncertainty — so show it that way.</p></div></div>
+        <h3>See the household balance, month by month</h3>
+        <p>Fees going out, stipend and wages coming in, adjusted for how often each course
+        leads to work. You get the month the household breaks even and the point where one
+        option overtakes the other, instead of a salary figure with no date attached.</p></div></div>
       <div class="step"><span class="sn">04</span><div>
-        <h3>Map what is actually reachable</h3>
-        <p>Direction, road distance, travel mode, journey time and monthly fare to
-        every ITI, polytechnic, skill hub and college in range. A path is only real
-        if the child can get there every morning.</p></div></div>
-      <div class="step"><span class="sn">05</span><div>
-        <h3>Answer the objection, not the question</h3>
-        <p>“It is a dead end.” “What will people say?” Each one answered with
-        evidence and with the neighbours who already took that route.</p></div></div>
-      <div class="step"><span class="sn">06</span><div>
-        <h3>End with something on paper</h3>
-        <p>A decision record with concerns named, numbers attached, and a review
-        date — because the conversation has to continue after the room empties.</p></div></div>
+        <h3>Find the centres you can genuinely reach</h3>
+        <p>Every institute near you with the road distance, how to travel, the journey
+        time and what the commute costs each month. The best course in the state is worth
+        nothing if there is no bus that goes there.</p></div></div>
     </div>
   </div>
 </section>
@@ -332,32 +334,33 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="band" id="different">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">What's different</span>
-      <h2>The recommender already exists. The conversation does not.</h2>
-      <p>National skilling platforms already carry thousands of courses with
-      AI-matched recommendations for students. That problem is solved. This is the
-      other half.</p>
+      <p class="kicker">What makes it different</p>
+      <h2>The course recommender already exists. The family conversation does not.</h2>
+      <p>National skilling platforms already list thousands of courses and match them to
+        students. That part is solved. This is the half nobody has built.</p>
     </div>
     <div class="vs-grid">
       <div class="vs-card rv">
-        <h3>Every career tool today</h3>
+        <h3>Career tools today</h3>
         <ul>
-          <li>Speaks to the student</li>
-          <li>Starts from a psychometric test</li>
-          <li>Produces a report, once</li>
-          <li>Quotes a salary with no date attached</li>
-          <li>Built for a city, in English</li>
+          <li>Speak only to the student</li>
+          <li>Open with a psychometric test</li>
+          <li>Produce one report, once</li>
+          <li>Quote a salary with no date attached</li>
+          <li>Assume a city, and English</li>
+          <li>Never mention how you would get there</li>
         </ul>
       </div>
-      <div class="vs-mid rv">against</div>
+      <div class="vs-mid rv">compared with</div>
       <div class="vs-card good rv">
         <h3>Kutumb Nirnay</h3>
         <ul>
-          <li>Speaks to the parent holding the veto</li>
-          <li>Starts from the household's economics</li>
-          <li>Stays through the decision window</li>
-          <li>Shows month-by-month household position</li>
-          <li>Voice-first, in the language spoken at home</li>
+          <li>Speaks to the parent who decides</li>
+          <li>Opens with the household budget</li>
+          <li>Stays through the admission season</li>
+          <li>Shows the household balance month by month</li>
+          <li>Built for a weak connection and a cheap phone</li>
+          <li>Maps every centre within travelling distance</li>
         </ul>
       </div>
     </div>
@@ -367,47 +370,62 @@ html.js .rv.in{opacity:1;transform:none}
 <section>
   <div class="wrap teaser">
     <div class="rv">
-      <span class="eyebrow">Reachability</span>
-      <h2>Is it close enough to go every morning?</h2>
-      <p style="font-size:17px;color:var(--ink-2);margin-top:16px">
-        Bearing gives direction, radius gives distance. Every institute in range,
-        with the travel mode, the journey time and what the commute costs a month —
-        computed, not guessed. Because the best course in the state is worth nothing
-        if the bus does not go there.</p>
-      <p style="font-size:14px;color:var(--ink-3)">
-        Drawn rather than tiled, so it works on a weak connection and a cheap phone.</p>
+      <p class="kicker">Reachability</p>
+      <h2>Close enough to go every morning?</h2>
+      <p style="font-size:17px;color:var(--ink-2);margin-top:18px">
+        Direction around the circle, distance out from the centre. Every institute in range
+        carries the road distance, the way to travel, the journey time and the monthly fare,
+        all worked out rather than guessed. Anything beyond daily travelling distance is
+        marked clearly, so hostel costs go into the plan before a course is shortlisted.</p>
+      <p style="font-size:14.5px;color:var(--ink-3)">
+        The map is drawn rather than loaded from a tile service, so it opens quickly on a
+        slow connection and keeps working when the signal does not.</p>
     </div>
     <div class="plate-mini rv">
-      <svg viewBox="0 0 300 300" aria-label="Radial plan of nearby institutes">
+      <svg viewBox="0 0 300 300" aria-label="Map of nearby institutes by direction and distance">
         <circle cx="150" cy="150" r="128" fill="none" stroke="#ded6c8"/>
-        <circle cx="150" cy="150" r="46" fill="none" stroke="#e8e2d6" stroke-dasharray="3 4"/>
-        <circle cx="150" cy="150" r="80" fill="none" stroke="#e8e2d6" stroke-dasharray="3 4"/>
-        <circle cx="150" cy="150" r="112" fill="none" stroke="#e8e2d6" stroke-dasharray="3 4"/>
+        <circle cx="150" cy="150" r="46" fill="none" stroke="#e8e2d6" stroke-dasharray="3 5"/>
+        <circle cx="150" cy="150" r="80" fill="none" stroke="#e8e2d6" stroke-dasharray="3 5"/>
+        <circle cx="150" cy="150" r="112" fill="none" stroke="#e8e2d6" stroke-dasharray="3 5"/>
         <line x1="150" y1="22" x2="150" y2="278" stroke="#efeae1"/>
         <line x1="22" y1="150" x2="278" y2="150" stroke="#efeae1"/>
         <g font-family="ui-monospace,Menlo,monospace" font-size="8" fill="#a79c8c">
           <text x="154" y="100">5 km</text><text x="154" y="66">15 km</text><text x="154" y="34">40 km</text>
         </g>
-        <g stroke="#c2701c" stroke-width="1" opacity=".5">
-          <line x1="150" y1="150" x2="186" y2="122"/>
-          <line x1="150" y1="150" x2="112" y2="168"/>
-          <line x1="150" y1="150" x2="168" y2="206"/>
-          <line x1="150" y1="150" x2="94" y2="104"/>
+        <g stroke="#c2701c" stroke-width="1" opacity=".45">
+          <line x1="150" y1="150" x2="186" y2="122"/><line x1="150" y1="150" x2="112" y2="168"/>
+          <line x1="150" y1="150" x2="168" y2="206"/><line x1="150" y1="150" x2="94" y2="104"/>
         </g>
-        <g fill="#fffdf8" stroke="#a79c8c" stroke-width="1.2">
-          <circle cx="186" cy="122" r="11"/><circle cx="112" cy="168" r="11"/>
-          <circle cx="168" cy="206" r="11"/><circle cx="94" cy="104" r="11"/>
+        <g fill="#f7f4ee" stroke="#a79c8c" stroke-width="1.2">
+          <circle cx="112" cy="168" r="10"/><circle cx="168" cy="206" r="10"/><circle cx="94" cy="104" r="10"/>
         </g>
-        <circle cx="186" cy="122" r="11" fill="#c2701c" stroke="#fffdf8" stroke-width="2"/>
+        <circle cx="186" cy="122" r="13" fill="#c2701c" stroke="#fffdf8" stroke-width="2"/>
         <circle cx="150" cy="150" r="6.5" fill="#23201c"/>
-        <circle cx="150" cy="150" r="12" fill="none" stroke="#23201c" opacity=".25"/>
+        <circle cx="150" cy="150" r="12" fill="none" stroke="#23201c" opacity=".22"/>
         <text x="150" y="176" text-anchor="middle" font-family="-apple-system,Segoe UI,sans-serif"
-              font-size="10" font-weight="600" fill="#4a443c">Home</text>
-        <text x="202" y="118" font-family="-apple-system,Segoe UI,sans-serif" font-size="9.5"
-              fill="#23201c" font-weight="600">ITI · 8.7 km</text>
-        <text x="202" y="130" font-family="-apple-system,Segoe UI,sans-serif" font-size="9"
-              fill="#7a7064">auto · 26 min</text>
+              font-size="10" font-weight="600" fill="#4a443c">You</text>
+        <text x="204" y="118" font-family="-apple-system,Segoe UI,sans-serif" font-size="9.5"
+              fill="#23201c" font-weight="600">ITI, 8.7 km</text>
+        <text x="204" y="130" font-family="-apple-system,Segoe UI,sans-serif" font-size="9"
+              fill="#7a7064">share auto, 26 min</text>
       </svg>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="note rv">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M12 2.5 L20 6 v6c0 4.4-3.3 8.4-8 9.5C7.3 20.4 4 16.4 4 12V6Z" stroke-linejoin="round"/>
+        <path d="M9 12.2 l2.2 2.2 L15.2 10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h3>Your family details never leave your phone</h3>
+        <p>There is no account to create and no server storing your answers. Everything you
+        enter stays in your own browser, and the printed plan is generated on your device.
+        When you are finished you can clear it with a single tap.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -415,9 +433,9 @@ html.js .rv.in{opacity:1;transform:none}
 <section class="close" style="background:var(--paper-2);border-top:1px solid var(--rule)">
   <div class="wrap">
     <h2 class="rv">A good decision is one the whole family can defend.</h2>
-    <p class="rv">Open the prototype and walk a household through it —
-      from the argument at home to the plan on paper.</p>
-    <a class="btn rv" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the prototype →</a>
+    <p class="rv">Work through it together, from the question being argued about at home
+      to a plan you can print and sign.</p>
+    <a class="btn lg rv" href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the app</a>
   </div>
 </section>
 
@@ -425,35 +443,32 @@ html.js .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="f-in">
       <div>
-        <a class="logo" href="#top" style="margin-bottom:12px">
+        <a class="logo" href="#top" style="margin-bottom:14px">
           <svg width="24" height="24" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7">
             <path d="M16 4 L28 13 V28 H4 V13 Z" stroke-linejoin="round"/>
             <circle cx="12" cy="20" r="2.6" stroke-width="1.5"/><circle cx="20" cy="20" r="2.6" stroke-width="1.5"/>
             <path d="M14.6 20 h2.8" stroke-width="1.5"/>
           </svg>
-          <span><b>Kutumb Nirnay</b></span>
+          <b>Kutumb Nirnay</b>
         </a>
-        <p>Career counselling and decision support for the household. Built on the
-        NSQF, PMKVY and NAPS rails — designed to sit in front of national skilling
-        infrastructure, not to replace it.</p>
+        <p>Career guidance built around the household. Designed to sit alongside national
+        skilling services rather than replace them.</p>
       </div>
       <div class="f-col">
-        <span class="eyebrow">Where a recommendation ends</span>
+        <p class="kicker">Official resources</p>
         <a href="https://www.skillindiadigital.gov.in" target="_blank" rel="noopener">Skill India Digital Hub</a>
         <a href="https://www.apprenticeshipindia.gov.in" target="_blank" rel="noopener">Apprenticeship India</a>
         <a href="https://www.ncs.gov.in" target="_blank" rel="noopener">National Career Service</a>
         <a href="https://www.nqr.gov.in" target="_blank" rel="noopener">Qualifications Register</a>
       </div>
       <div class="f-col">
-        <span class="eyebrow">Project</span>
-        <a href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Prototype</a>
-        <a href="https://github.com/AkshayOggisetty/kutumb-nirnay" target="_blank" rel="noopener">Source</a>
+        <p class="kicker">Project</p>
+        <a href="https://akshayoggisetty.github.io/kutumb-nirnay/" target="_blank" rel="noopener">Open the app</a>
+        <a href="https://github.com/AkshayOggisetty/kutumb-nirnay" target="_blank" rel="noopener">Source code</a>
       </div>
     </div>
-    <div class="f-base">
-      <span>All figures shown in the prototype are seeded demonstration data.</span>
-      <span class="script">कुटुंब निर्णय</span>
-    </div>
+    <div class="f-base">Course, wage and centre information shown in the app is illustrative
+      while data partnerships are being established.</div>
   </div>
 </footer>
 
@@ -465,14 +480,11 @@ const revealAll = () => rv.forEach(el => el.classList.add('in'));
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), {rootMargin:'0px 0px -40px 0px'});
-  rv.forEach((el,i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
-  /* fail-safe: nothing stays invisible, whatever the observer does */
-  setTimeout(revealAll, 1500);
+  }), {rootMargin:'0px 0px -50px 0px'});
+  rv.forEach((el,i) => { el.style.transitionDelay = (i % 4) * 80 + 'ms'; io.observe(el); });
+  setTimeout(revealAll, 1600);
   addEventListener('load', () => setTimeout(revealAll, 400));
-} else {
-  revealAll();
-}
+} else { revealAll(); }
 </script>
 </body>
 </html>
